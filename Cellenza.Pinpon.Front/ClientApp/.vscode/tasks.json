@@ -1,0 +1,88 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start all",
+      "dependsOn": [
+        "run:backend",
+        "run:frontend",
+        "run:chrome"
+      ],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "never",
+      }
+    },
+    {
+      "type": "npm",
+      "script": "start",
+      "identifier": "run:frontend",
+      "problemMatcher": [
+        "$eslint-compact"
+      ]
+    },
+    {
+      "type": "npm",
+      "script": "unit",
+      "problemMatcher": []
+    },
+    {
+      "label": "msbuild: run backend",
+      "identifier": "run:backend",
+      "windows": {
+        "command": "C:\\Program Files (x86)\\IIS Express\\iisexpress.exe"
+      },
+      "args": [
+        "/path:C:\\Git\\Cellenza\\Alfred-Back\\Backend\\Service\\Host\\",
+        "/port:47204"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "msbuild: build backend",
+      "windows": {
+        "command": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Enterprise\\MSBuild\\15.0\\Bin\\MSBuild.exe"
+      },
+      "args": [
+        "C:\\Git\\Cellenza\\Alfred-Back\\Backend\\Edenred.France.Alfred.sln"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "git: clean local branch",
+      "type": "shell",
+      "windows": {
+        "command": "git fetch -p ; git branch -vv | ? {$_ -like '* gone]*'} | ForEach-Object { git branch -D $_.Trim().Split(\" \")[0] }"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "chrome: open coverage report",
+      "windows": {
+        "command": "explorer.exe"
+      },
+      "args": [
+        "C:\\Git\\Cellenza\\Alfred\\Frontend\\test\\unit\\coverage\\lcov-report\\index.html",
+      ],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "never",
+      }
+    },
+    {
+      "label": "chrome: Debug",
+      "identifier": "run:chrome",
+      "type": "shell",
+      "windows": {
+        "command": "start chrome.exe --remote-debugging-port=9222"
+      },
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "never",
+      }
+    }
+  ]
+}
