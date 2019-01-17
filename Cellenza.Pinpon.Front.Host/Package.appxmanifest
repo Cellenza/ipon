@@ -1,11 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Package
-    xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-    xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
-    xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-    xmlns:iot="http://schemas.microsoft.com/appx/manifest/iot/windows10"
-    IgnorableNamespaces="uap mp iot">
-  <Identity Name="6db402f0-f473-43b0-8f71-25a3e3e4a5da" Publisher="CN=onyx_" Version="1.0.0.0" />
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:iot="http://schemas.microsoft.com/appx/manifest/iot/windows10" IgnorableNamespaces="uap mp iot">
+  <Identity Name="6db402f0-f473-43b0-8f71-25a3e3e4a5da" Publisher="CN=Cellenza_test" Version="1.0.0.0" />
   <mp:PhoneIdentity PhoneProductId="6db402f0-f473-43b0-8f71-25a3e3e4a5da" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Cellenza.Pinpon.Front.Host</DisplayName>
@@ -20,13 +15,7 @@
   </Resources>
   <Applications>
     <Application Id="App">
-      <uap:VisualElements
-        DisplayName="Cellenza.Pinpon.Front.Host"
-        Square150x150Logo="Assets\Square150x150Logo.png"
-        Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="Cellenza.Pinpon.Front.Host"
-        BackgroundColor="transparent"
-        AppListEntry="none">
+      <uap:VisualElements DisplayName="Cellenza.Pinpon.Front.Host" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Cellenza.Pinpon.Front.Host" BackgroundColor="transparent" AppListEntry="none">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png">
         </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />

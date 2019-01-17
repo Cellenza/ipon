@@ -21,6 +21,7 @@
     <PackageCertificateKeyFile>Cellenza.Pinpon.Front.Host_TemporaryKey.pfx</PackageCertificateKeyFile>
     <AppxPackage>true</AppxPackage>
     <ContainsStartupTask>true</ContainsStartupTask>
+    <PackageCertificateThumbprint>0A588685D35D979B7E46CB05051113CED50212BA</PackageCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
