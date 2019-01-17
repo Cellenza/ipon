@@ -17,18 +17,17 @@ steps:
     versionSpec: 4.4.1
 
 - task: NuGetCommand@2
-  displayName: 'NuGet restore **\*.sln'
+  displayName: 'NuGet restore'
   inputs:
-    restoreSolution: '$(Parameters.solution)'
+    restoreSolution: 'Cellenza.Pinpon.sln'
 
 - task: VSBuild@1
-  displayName: 'Build solution **\*.sln'
+  displayName: 'Build solution'
   inputs:
-    solution: '$(Parameters.solution)'
+    solution: 'Cellenza.Pinpon.sln'
     vsVersion: 15.0
-    msbuildArgs: '/p:AppxBundlePlatforms="$(BuildPlatform)" /p:AppxPackageDir="$(Build.ArtifactStagingDirectory)\AppxPackages\\" /p:AppxBundle=Always /p:UapAppxPackageBuildMode=StoreUpload'
+    msbuildArgs: '/p:AppxBundlePlatforms="ARM" /p:AppxPackageDir="$(Build.ArtifactStagingDirectory)\AppxPackages\\" /p:AppxBundle=Always /p:UapAppxPackageBuildMode=StoreUpload'
     platform: ARM
-    configuration: '$(BuildConfiguration)'
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish artifact: drop'
