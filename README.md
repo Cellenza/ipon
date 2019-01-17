@@ -2,6 +2,8 @@
 
 Ce projet est utilisé au sein du studio de Cellenza, afin d'alerter les développeurs lorsqu'une build (du pipeline de build/release) d'un projet échoue.
 
+[![Build Status](https://dev.azure.com/cellenza-oss/ipon/_apis/build/status/Nagarian.ipon?branchName=master)](https://dev.azure.com/cellenza-oss/ipon/_build/latest?definitionId=1?branchName=master)
+
 - [Interface web du pinpon](./docs/Pinpon.md)
 - [VSTS - Ajouter une nouvelle usine de build](./docs/VSTS.md)
 - [Developement informations complémentaires](./docs/Development.md)
@@ -42,4 +44,3 @@ La seconde application `Front.Host` est une application UWP qui héberge et expo
 Le projet est donc composé de deux applications UWP, le déploiement est donc relativement simple à réaliser. Pour cela, il peut être fait soit à partir de Visual Studio (en faisant du déploiement à distance) soit en utilisant l'interface web fournis pour uploader les deux packages.
 
 ![Web UI](./docs/images/pinpon-webui-app_upload.png)
-
